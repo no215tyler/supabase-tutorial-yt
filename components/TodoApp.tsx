@@ -34,7 +34,7 @@ const TodoApp = () => {
       <input type='text' className='text-black mr-2 shadow-lg p-1 outline-none' onChange={(e) => setTitle(e.target.value)} value={title} />
       <button className='text-black shadow-md border-2 p-1 rounded-lg bg-green-200'>Add</button>
     </form>
-    <TodoList todos={todos}/>
+    <TodoList todos={todos} setTodos={setTodos} />
   </section>
 };
 

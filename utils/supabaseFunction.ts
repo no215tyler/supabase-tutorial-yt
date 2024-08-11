@@ -10,3 +10,10 @@ export const addTodo = async (title: string) => {
   .insert([{title: title}])
   .select();
 };
+
+export const deleteTodo = async (id: number) => {
+  await supabase
+  .from('todo')
+  .delete()
+  .eq('id', id)
+};
